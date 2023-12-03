@@ -1,0 +1,25 @@
+a.no-decoration,
+a.no-decoration:hover {
+  text-decoration: none !important;
+}
+
+@each $color,
+$value in $theme-colors {
+  .link-#{$color} {
+    color: $value !important;
+
+    @include hover {
+      color: darken($value, 10%) !important;
+      // text-decoration: $link-hover-decoration;
+    }
+  }
+}
+
+.link-white {
+  color: $white!important;
+
+  @include hover {
+    color: darken($white, 10%)!important;
+    // text-decoration: $link-hover-decoration;
+  }
+}

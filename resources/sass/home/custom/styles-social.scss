@@ -1,0 +1,57 @@
+ul.social,
+ul.social-nav {
+    list-style: none;
+    padding: 0 !important;
+}
+
+ul.social li,
+ul.social-nav li {
+    display: inline-block;
+    margin-right: .35rem;
+}
+
+ul.social li a,
+ul.social-nav li a {
+    text-decoration: none !important;
+}
+
+.social li a:hover,
+ul.social-nav li a:hover {
+    opacity: 0.85;
+    -webkit-transition: all 0.9s;
+    -moz-transition: all 0.9s;
+    -o-transition: all 0.9s;
+    -ms-transition: all 0.9s;
+    transition: all 0.9s;
+}
+
+.social li a,
+ul.social-nav li a {
+    color: $white;
+}
+
+.social li a:hover {
+    color: $white !important;
+}
+
+.social .icon-circle {
+    border-radius: 50%;
+    background: $primary;
+}
+
+.social-nav .icon-circle {
+    border-radius: 50%;
+    background: $nav;
+}
+
+.social .icon-circle:hover {
+    background: $white;
+}
+
+.social-nav .icon-circle:hover {
+    background: $secondary;
+    transition: 0.5s;
+    a i {
+        color: $white !important;
+    }
+}

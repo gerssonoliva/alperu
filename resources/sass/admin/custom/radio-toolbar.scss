@@ -1,0 +1,43 @@
+.radio-toolbar input[type="radio"] {
+  display: none;
+}
+
+.radio-toolbar label {
+  display: inline-block;
+  background-color: #ddd;
+  padding: 4px 11px;
+  cursor: pointer;
+}
+
+.radio-toolbar input[type="radio"]:checked+label {
+  color: #fff;
+  background-color: $primary;
+}
+
+.radio-toolbar label i {
+  display: none;
+}
+
+.radio-toolbar input[type="radio"]:checked+label {
+  color: #fff;
+  background-color: $primary;
+}
+
+.radio-toolbar input[type="radio"]:checked+label i {
+  display: inline-block;
+}
+
+.radio-toolbar .input-group-text{
+  padding: 0 ;
+}
+.radio-toolbar .input-group-text .form-check-label {
+  height: 100%;
+}
+.radio-toolbar .input-group-text label{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.radio-toolbar .input-group-text label i{
+  margin-right: 3px ;
+}

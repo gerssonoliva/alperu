@@ -1,0 +1,209 @@
+// Clean button
+.btn-clean {
+  border-color: transparent;
+  background: transparent;
+  color: app-base-color(shape, 3);
+
+  i {
+    color: app-base-color(shape, 3);
+  }
+
+  .show>&,
+  &.active,
+  &:active,
+  &:hover {
+    color: app-brand-color();
+    background: app-base-color(shape, 1);
+
+    i {
+      color: app-brand-color();
+    }
+  }
+}
+
+// Default button
+.btn-default {
+  border: 0;
+  background: transparent;
+  color: app-base-color(label, 3);
+  border: 1px solid app-base-color(shape, 2);
+
+  i {
+    color: app-base-color(shape, 3);
+  }
+
+  .show>&,
+  &.active,
+  &:active,
+  &:hover {
+    i {
+      color: app-brand-color(inverse);
+    }
+
+    color: app-brand-color(inverse);
+    background: app-brand-color();
+    border-color: app-brand-color();
+  }
+}
+
+
+
+// Button states
+@each $name,
+$color in $app-state-colors {
+  .btn-#{$name} {
+    @include button-variant(app-get($color, base), app-get($color, base));
+
+    @if $name==light {
+
+      .show>&.dropdown-toggle,
+      &:focus,
+      &.active,
+      &:active,
+      &:hover {
+        background-color: app-base-color(grey, 1);
+        border-color: app-base-color(grey, 1);
+      }
+    }
+
+    &+.btn.dropdown-toggle {
+      position: relative;
+
+      &:before {
+        display: block;
+        content: ' ';
+        border-left: 1px solid app-get($color, inverse);
+        position: absolute;
+        top: 3px;
+        left: -1px;
+        bottom: 3px;
+        opacity: 0.3;
+      }
+
+      &:hover,
+      &:focus,
+      &.active {
+        &:before {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+// Hover states
+@each $name,
+$color in $app-state-colors {
+  .btn-hover-#{$name} {
+
+    .show>&,
+    &.active,
+    &:active:not(.disabled),
+    &:hover:not(.disabled) {
+      color: app-get($color, inverse);
+      background-color: app-get($color, base);
+      border-color: app-get($color, base);
+    }
+    &:hover.disabled
+    {
+      cursor: not-allowed ;
+    }
+  }
+
+  .btn-outline-hover-#{$name} {
+
+    &.btn-clean {
+      border: 1px solid transparent;
+    }
+
+    .show>&,
+    &.active,
+    &:active:not(.disabled),
+    &:hover:not(.disabled) {
+      color: app-get($color, base);
+      border-color: app-get($color, base);
+      background-color: transparent;
+    }
+    &:hover.disabled
+    {
+      cursor: not-allowed ;
+    }
+  }
+}
+
+
+
+// Elevate buttons
+.btn {
+
+  // Elevate 1
+  &.btn-elevate {
+    transition: all 0.3s ease 0s;
+
+    &.btn-elevate-air {
+      &:hover {
+        transform: translate(0, -4px);
+      }
+    }
+  }
+
+  @each $name,
+  $color in $app-state-colors {
+    $base-color: app-get($color, base);
+
+    @if $name==light {
+      $base-color: #999999;
+    }
+
+    &.btn-#{$name}.btn-elevate {
+      box-shadow: 0px 4px 16px 0px rgba($base-color, 0.15);
+
+      .show>&,
+      &:focus,
+      &.active,
+      &:active,
+      &:hover {
+        box-shadow: 0px 9px 16px 0px rgba($base-color, 0.25) !important;
+
+        &.btn-sm {
+          box-shadow: 0px 6px 16px 0px rgba($base-color, 0.25) !important;
+        }
+
+        @if $name==light {
+          background-color: transparent;
+          border-color: transparent;
+        }
+      }
+    }
+
+    &.btn-#{$name}.btn-elevate-hover {
+
+      .show>&,
+      &.active,
+      &:focus,
+      &:active,
+      &:hover {
+        box-shadow: 0px 9px 16px 0px rgba($base-color, 0.25) !important;
+
+        &.btn-sm {
+          box-shadow: 0px 6px 16px 0px rgba($base-color, 0.25) !important;
+        }
+
+        @if $name==light {
+          background-color: transparent;
+          border-color: transparent;
+        }
+      }
+    }
+  }
+}
+
+//  Shadow None ====================================
+.btn-clean,
+.btn-default,
+[class^="btn-outline-hover"],
+[class*=" btn-outline-hover"],
+[class^="btn-hover"],
+[class*=" btn-hover"]   {
+  box-shadow: none ;
+}

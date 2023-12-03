@@ -1,0 +1,62 @@
+.btn {
+  border-radius: 2px;
+  font-weight: 500;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 8px 0 rgba(0, 0, 0, 0.1);
+  transition: box-shadow linear 0.4s;
+  transition: box-shadow linear 0.5s;
+
+  &:focus,
+  &.focus {
+    box-shadow: 0 0 0 0.1rem rgba($primary, 0.1);
+  }
+
+  &:hover {
+    box-shadow: none;
+  }
+
+}
+
+/* btn link */
+.btn-link,
+.btn-link:focus,
+.link {
+  box-shadow: none;
+}
+
+/* FLAT */
+.btn-flat {
+  background: transparent;
+  background-color: transparent;
+}
+
+
+// Square buttons
+.btn {
+  &.btn-square {
+    border-radius: 0;
+  }
+}
+
+// Pill buttons
+.btn {
+  &.btn-pill {
+    border-radius: 2rem;
+  }
+}
+
+
+// Badge on buttons
+.btn .badge-pill {
+  padding: 0.25rem;
+}
+
+// Circle on buttons
+.btn{
+  &.btn-circle {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    padding: 0.5rem;
+    text-align: center;
+  }
+}

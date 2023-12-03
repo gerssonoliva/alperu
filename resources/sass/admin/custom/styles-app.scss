@@ -1,0 +1,91 @@
+.logo-admin {
+    max-width: 140px;
+}
+
+.img-view-edit {
+    max-height: 250px;
+}
+
+.close-danger {
+    font-size: 1.25rem;
+    position: absolute;
+    background-color: $black !important;
+    right: -15px;
+    top: -15px;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    opacity: .75;
+    color: $gray-100;
+    padding: 0;
+    transition: all 0.2s ease-in-out;
+    &:hover {
+        opacity: .9 !important;
+        color: #fff !important;
+    }
+}
+
+.preview-img {
+    img {
+        margin-right: 0.35rem;
+        margin-bottom: 0.5rem;
+    }
+    img:last-child {
+        margin-right: 0;
+    }
+}
+
+.ui-state-default {
+    .icon-move {
+        color: rgba(#000000, 0.75);
+        position: absolute;
+        // margin-left: 1px;
+        // margin-top: -1px;
+        cursor: pointer;
+        padding: 1px;
+    }
+    &:hover .icon-move,
+    .icon-move:hover {
+        color: rgba(#000000, 0.95);
+        background-color: rgba(#000000, 0.15);
+    }
+}
+
+
+/* Personalizacion de Objectos */
+
+.btn {
+    font-weight: 400 !important;
+}
+
+.badge {
+    font-weight: 500 !important;
+}
+
+svg:not(:root).svg-inline--fa {
+    margin-left: 4px;
+    margin-right: 4px;
+}
+
+.sidebar svg:not(:root).svg-inline--fa {
+    margin-right: 6px;
+}
+
+
+/*  */
+
+.t_item:before {
+    content: "";
+    display: inline-block;
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 50%;
+    margin-right: 0.25rem;
+    background-color: $secondary;
+}
+
+.form-blockchain hr {
+    color: $secondary;
+    height: 0px;
+    border: 0.5px dashed;
+}

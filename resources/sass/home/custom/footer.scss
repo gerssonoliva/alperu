@@ -1,0 +1,48 @@
+.lista {
+    list-style: none;
+    padding: 0px;
+}
+
+.border-bottom {
+    border-color: $primary !important;
+    font-weight: 600;
+}
+
+.icono_f {
+    font-size: 1.4rem;
+}
+
+.form_f form {
+    text-align: -webkit-center;
+}
+
+.form_f input {
+    border-top-left-radius: 50rem;
+    border-bottom-left-radius: 50rem;
+}
+
+.form_f button {
+    border-top-right-radius: 50rem !important;
+    border-bottom-right-radius: 50rem !important;
+}
+
+.redes:hover {
+    background: $primary;
+    i {
+        color: $secondary;
+    }
+    transform: scale(1.1);
+    transition: 0.5s;
+}
+
+.redes {
+    border-radius: 50%;
+    background: $gray;
+    i {
+        color: $white;
+    }
+}
+
+.lista li a:hover {
+    color: $primary !important;
+}

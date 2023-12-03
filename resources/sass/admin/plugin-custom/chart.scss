@@ -1,0 +1,22 @@
+canvas {
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+
+.chart-area,
+.chart-bar,
+.chart-pie {
+  position: relative;
+  height: 10rem;
+  width: 100%
+}
+
+@media (min-width:768px) {
+
+  .chart-area,
+  .chart-bar,
+  .chart-pie {
+    height: 20rem
+  }
+}

@@ -1,0 +1,37 @@
+// Body
+$body-bg: #f8fafc;
+$white: #ffffff !default;
+$black: #000000 !default;
+// Typography
+$font-family-sans-serif: 'Nunito',
+sans-serif;
+$font-size-base: 0.9rem;
+$line-height-base: 1.6;
+// Colors
+$blue: #35495E;
+$indigo: #6574cd;
+$purple: #9561e2;
+$pink: #FFA494;
+$red: #e3342f;
+$orange: #FF7E67;
+$yellow: #ffed4a;
+$green: #38c172;
+$teal: #4dc0b5;
+$cyan: #6cb2eb;
+$grlight: #ececec;
+$gray: #818181;
+$dark-light: #19232D;
+// Theme Colors
+$primary: $orange !default;
+$secondary: $blue !default;
+$nav: $pink !default;
+$success: #34b200 !default;
+$info: #086bb5 !default;
+$warning: #ff6600 !default;
+$danger: #ED3237 !default;
+
+/* $lightt: $grlight !default; */
+
+$gray: $gray !default;
+$dark: #1e120d !default;
+$light: $dark-light !default;
